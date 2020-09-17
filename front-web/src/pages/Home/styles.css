@@ -32,6 +32,7 @@
     font-weight: bold;
     font-size: 24px;
     padding: 20px 45px;
+    text-transform: uppercase;
   }
   
   .home-btn:hover {
