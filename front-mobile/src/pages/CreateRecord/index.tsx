@@ -14,7 +14,7 @@ import { GamePlatform, Game } from './type'
 
 
 const placeholder = { label: 'Selecione o jogo', value: null }
-const BASE_URL = 'http://10.0.2.15:8080';
+const BASE_URL = 'https://rank-games.herokuapp.com';
 
 const mapSelectValue = (games: Game[]) => games.map(game => ({
     ...game,
@@ -130,7 +130,6 @@ const CreateRecord = () => {
         </>
     );
 }
-
 
 
 const pickerSelectStyle = StyleSheet.create(
