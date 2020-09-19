@@ -1,16 +1,26 @@
 import React from 'react'
 
-import { StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler'
+import { useNavigation } from '@react-navigation/native'
 
 
 const Header = () => {
 
+    const navigation = useNavigation();
+
+    const handleOnPress = () => {
+        navigation.navigate('Home')
+    }
+
     return (
-        <View style={styles.header}>
-            <Image source={require('../../assets/logo.png')} />
-            <Text style={styles.textLogo1}>Gig Game</Text>
-            <Text style={styles.textLogo2}>Survey</Text>
-        </View>
+        <TouchableWithoutFeedback onPress={handleOnPress}>
+            <View style={styles.header}>
+                <Image source={require('../../assets/logo.png')} />
+                <Text style={styles.textLogo1}>Gig Game</Text>
+                <Text style={styles.textLogo2}>Survey</Text>
+            </View>
+        </TouchableWithoutFeedback>
     )
 
 };
